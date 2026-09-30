@@ -79,12 +79,12 @@
     tcpdump
 
     # Internal interfaces
-    i2ctools
-    lspci
-    lsusb
+    i2c-tools
+    pciutils
+    usbutils
 
     # Other stuff
-    neofetch
+    hyfetch   # neofetch fork for nixos
   ];
 
   # -- Nix settings ------------------------------------------------------------
