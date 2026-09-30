@@ -13,6 +13,7 @@
                     ./hosts/quietus/configuration.nix
                     ./hosts/quietus/hardware-configuration.nix
                     ./modules/common.nix
+                    ./modules/nvidia.nix
                 ];
             };
         };
