@@ -97,6 +97,9 @@
 
   # -- Host contains an NVIDIA 1070ti ------------------------------------------
 
+  # 580 legacy driver doesn't build on newest kernels, stay on 6.12 LTS
+  boot.kernelPackages = pkgs.linuxPackages_6_12;
+
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
   hardware.nvidia.open = false;
 }

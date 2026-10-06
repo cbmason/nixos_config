@@ -90,7 +90,7 @@
   # -- Nix settings ------------------------------------------------------------
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
-    auto-optimize-store = true;
+    auto-optimise-store = true;
   };
 
   # Automatic garbage collection: keeps store from growing unbounded

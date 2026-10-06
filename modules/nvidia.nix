@@ -12,5 +12,8 @@
 
   # Tell X/Wayland to use the NVIDIA driver
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  # Add NVtop
+  environment.systemPackages = [ pkgs.nvtopPackages.nvidia ];
 }
 
