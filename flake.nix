@@ -21,6 +21,7 @@
                     ./modules/common.nix
                     ./modules/nvidia.nix
                     ./modules/claude-code.nix
+                    ./modules/vscode.nix
                 ];
             };
         };
