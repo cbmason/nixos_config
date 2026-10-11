@@ -14,9 +14,9 @@
   # TODO hostname is set per-host
 
   # -- We're always west coast best coast --------------------------------------
-  time.timeZone = "America/Los_Angeles"; 
+  time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
-  
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -28,7 +28,7 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   # -- Always use SSH ----------------------------------------------------------
   services.openssh = {
     enable = true;
@@ -38,12 +38,12 @@
     };
   };
 
-  # -- Always have me as a user, and give me sudo through wheel ---------------- 
+  # -- Always have me as a user, and give me sudo through wheel ----------------
   users.users.chris = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [
-      # "ssh-ed25519 AAAA... chris@wherever"  # TODO: add my actual pubkey
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGohJrDdgFhcCyJJf4KRti3j+jwzcomZC+pqEwCvxf+g chrism@midgar"  # TODO: add my actual pubkey
     ];
     shell = pkgs.bash;  # or pkgs.zsh, pkgs.fish, etc.
   };
