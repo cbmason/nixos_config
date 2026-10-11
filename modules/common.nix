@@ -34,6 +34,7 @@
     enable = true;
     settings = {
       PasswordAuthentication = false;  # keys only
+      KbdInteractiveAuthentication = false;  # no PAM password prompts either
       PermitRootLogin = "no";
     };
   };
@@ -43,7 +44,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGohJrDdgFhcCyJJf4KRti3j+jwzcomZC+pqEwCvxf+g chrism@midgar"  # TODO: add my actual pubkey
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGohJrDdgFhcCyJJf4KRti3j+jwzcomZC+pqEwCvxf+g chrism@midgar"
     ];
     shell = pkgs.bash;  # or pkgs.zsh, pkgs.fish, etc.
   };
